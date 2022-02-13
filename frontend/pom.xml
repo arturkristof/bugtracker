@@ -15,6 +15,13 @@
 		<plugins>
 
 		</plugins>
+
+		<resources>
+			<resource>
+				<directory>target/frontend</directory>
+				<targetPath>static</targetPath>
+			</resource>
+		</resources>
 	</build>
 
 </project>
