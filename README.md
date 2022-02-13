@@ -18,7 +18,7 @@ I intend to create a full documentation including functional designs, technical 
 
 ## Tech Stack
 * Java 17 (OpenJDK)
-    * Gradle
+    * Maven
 * Spring Boot
     * Spring Web
     * Spring Data JPA
