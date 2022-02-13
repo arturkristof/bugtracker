@@ -1,4 +1,4 @@
-package pl.arturkristof.bugtracker;
+package pl.arturkristof.backend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package pl.arturkristof.bugtracker;
+package pl.arturkristof.backend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
