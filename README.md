@@ -17,12 +17,21 @@ I am creating this application to work on my self-growth as a Java developer and
 I intend to create a full documentation including functional designs, technical designs, software requirements specification, environment setup manuals etc. before I start implementation process, just as I would do at work for programmers that would work on the project in the future. And I am going to do it using LaTeX to learn it.
 
 ## Tech Stack
+### Backend
 * Java 17 (OpenJDK)
     * Maven
 * Spring Boot
     * Spring Web
     * Spring Data JPA
 * PostgreSQL
+
+TBD
+
+### Frontend
+* HTML
+* CSS
+* JavaScript
+* WebPack
 
 TBD
 
