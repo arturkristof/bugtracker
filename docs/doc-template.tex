@@ -1,0 +1,39 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{caption}
+
+\captionsetup[table]{labelformat=empty}
+
+\begin{document}
+
+\begin{titlepage}
+    \vspace*{\fill}
+        \begin{center}
+            \huge
+            BugTracker
+            
+            \vspace{0.4cm}
+            \Huge
+            Document title here
+            
+            \vspace{3cm}
+            \begin{table}[h]
+            \centering
+                \caption{Document Revision History}
+                \begin{tabular}{cccc}
+                    \hline
+                    Date & Changed By & Version & Comments \\
+                    \hline 
+                    \hfill & \hfill & \hfill & \hfill \\
+                    \hfill & \hfill & \hfill & \hfill \\
+                    \hline
+                \end{tabular}
+            \end{table}
+        \end{center}
+    \vspace*{\fill}
+\end{titlepage}
+
+\tableofcontents
+
+\end{document}
