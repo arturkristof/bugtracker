@@ -38,6 +38,7 @@ TBD
 ## Tools
 * Git
 * IntelliJ IDEA
+* VS Code
 * DataGrip
 * Windows 10
 
