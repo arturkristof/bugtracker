@@ -7,6 +7,7 @@ Work in progress bugtracker webapp.
 * [Tech Stack](#tech-stack)
 * [Tools](#tools)
 * [Setup and development](#setup-and-development)
+* [Documentation](#documentation)
 
 ## General info
 This project is a bugtracker (Jira clone if you will).
@@ -71,6 +72,14 @@ All the instruction is written with Windows 10 in mind.
 
     * Go to `http://localhost:8080/`
     * If you're using IntelliJ, run configurations are included in the repository
-
-
+    
 TBD
+
+## Documentation
+1. Install [MiKTeX](https://miktex.org/download)
+2. Compile LaTeX files to PDFs
+
+        >cd docs
+        >compile
+
+3. The documentation is in `docs/target`
