@@ -35,10 +35,14 @@ TBD
 
 TBD
 
+### Documentation
+* LaTeX
+
 ## Tools
 * Git
 * IntelliJ IDEA
 * VS Code
+* Overleaf
 * DataGrip
 * Windows 10
 
