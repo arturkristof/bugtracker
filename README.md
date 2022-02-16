@@ -29,9 +29,7 @@ I intend to create a full documentation including functional designs, technical 
 TBD
 
 ### Frontend
-* HTML
-* CSS
-* JavaScript
+* TypeScript
 * WebPack
 
 TBD
