@@ -67,8 +67,8 @@ All the instruction is written with Windows 10 in mind.
 5. Clone the repository
 6. Run the project
 
-        .\mvnw.cmd clean install
-        .\mvnw.cmd spring-boot:run
+        >mvnw clean install
+        >mvnw spring-boot:run
 
     * Go to `http://localhost:8080/`
     * If you're using IntelliJ, run configurations are included in the repository
