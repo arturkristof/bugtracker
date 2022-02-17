@@ -1,3 +1,6 @@
+import "bootstrap";
+import "./scss/app.scss"
+
 class HelloWorld {
     private readonly message: string;
 
