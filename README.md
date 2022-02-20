@@ -8,6 +8,7 @@ Work in progress bugtracker webapp.
 * [Tools](#tools)
 * [Setup and development](#setup-and-development)
 * [Documentation](#documentation)
+* [Git Workflow](#git-workflow)
 
 ## General info
 This project is a bugtracker (Jira clone if you will).
