@@ -9,6 +9,7 @@ Work in progress bugtracker webapp.
 * [Setup and development](#setup-and-development)
 * [Documentation](#documentation)
 * [Git Workflow](#git-workflow)
+* [Code Style](#code-style)
 
 ## General info
 This project is a bugtracker (Jira clone if you will).
@@ -88,3 +89,18 @@ TBD
 ## Git Workflow
 This project uses Gitflow workflow.  
 Please refer to [this tutorial](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) or any other of your liking.
+
+## Code style
+### Java
+[palantir-java-format](https://github.com/palantir/palantir-java-format#maven-integration-via-spotless)  
+To check if files are formatted properly:
+
+        >mvnw spotless:check -pl backend
+
+The check will also run with `>mvwn verify`.  
+To apply formatting:
+
+        >mvnw spotless:apply -pl backend
+
+If you want to use `spotless:apply` or `spotless:check` from IntelliJ Maven plugin, first copy `.mvn/jvm.config` to `backend/.mvn/jvm.config`. 
+Don't worry, it is already configured to be ignored by git.
