@@ -38,7 +38,7 @@ TBD
 
 TBD
 
-### Documentation
+### Docs
 * LaTeX
 
 ## Tools
