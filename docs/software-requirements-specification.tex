@@ -2,6 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{float}
 \usepackage{caption}
+\usepackage{tabularx}
 
 \captionsetup[table]{labelformat=empty}
 \newcommand{\appName}{BugTracker}
@@ -74,7 +75,20 @@
     % TBD - not applicable in MVP
 
     \section{System Features and Requirement}
+
     \subsection{Functional Requirements}
+    \begin{table}[htbp]
+        \centering
+        \begin{tabularx}{\linewidth}{|X|l|}
+            \hline
+            \centering{Description} & \centering{Version} \tabularnewline \hline
+            Users should be able to create new tickets with title and desription & 0.1 MVP \tabularnewline \hline
+            Users should be able to edit title and description of a ticket & 0.1 MVP \tabularnewline \hline
+            Users should be able to delete ticket & 0.1 MVP \tabularnewline \hline
+            Users should be able to view list of tickets & 0.1 MVP \tabularnewline \hline
+            Users should be able to view separate tickets & 0.1 MVP \tabularnewline \hline
+        \end{tabularx}
+    \end{table}
     \subsection{External Interface Requirements}
     \subsection{System Features}
     \subsection{Non-functional Requirements}
