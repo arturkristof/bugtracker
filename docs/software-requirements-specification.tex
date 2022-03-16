@@ -4,7 +4,8 @@
 \usepackage{caption}
 
 \captionsetup[table]{labelformat=empty}
-\newcommand{\bugTracker}{\textbf{BugTracker}}
+\newcommand{\appName}{BugTracker}
+\newcommand{\appNameBold}{\textbf{BugTracker}}
 
 \begin{document}
 
@@ -12,7 +13,7 @@
         \vspace*{\fill}
         \begin{center}
             \huge
-            BugTracker
+            \appName{}
 
             \vspace{0.4cm}
             \Huge
@@ -38,13 +39,13 @@
     \tableofcontents
 
     \section{Introduction}
-    This document details the project plan for the developments of \bugTracker{}.
+    This document details the project plan for the developments of \appNameBold{}.
     \subsection{Purpose}
     The purpose of this project is to create a web application that can be used as a backlog of tickets, bugs, tasks, user stories etc. by development teams working on building software.
-    Out of all the documents available in \bugTracker{} documentation this one is of highest abstraction, which means that it only defines \textit{what} features will be available
+    Out of all the documents available in \appNameBold{} documentation this one is of highest abstraction, which means that it only defines \textit{what} features will be available
     and not \textit{how} they will look or \textit{how} they will be implemented.
     \subsection{Intended Audience}
-    Intended audience of this document are developers, designers and testers working on \bugTracker{}.
+    Intended audience of this document are developers, designers and testers working on \appNameBold{}.
     \subsection{Scope}
     This document includes a summary of:
     \begin{itemize}
@@ -55,6 +56,9 @@
         \item overall description
     \end{itemize}
     \section{Overall Description}
+    Development teams need tools that let them distribute tasks among developers and track their progress.
+    The problem is that because different development teams work with different methodologies they have to look for a tool that suits them.
+    \appNameBold{} aims to become a go-to backlog application for development teams by providing high customizability and modularity.
     \subsection{User Needs}
     \subsection{Assumptions and Dependencies}
     \section{System Features and Requirement}
