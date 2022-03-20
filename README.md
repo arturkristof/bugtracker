@@ -40,6 +40,7 @@ TBD
 
 ### Docs
 * LaTeX
+* DBML
 
 ## Tools
 * Git
@@ -48,6 +49,7 @@ TBD
 * Overleaf
 * DataGrip
 * Windows 10
+* dbdiagram.io
 
 TBD
 
