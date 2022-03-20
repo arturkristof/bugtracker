@@ -26,7 +26,7 @@ I intend to create a full documentation including functional designs, technical 
 * Spring Boot
     * Spring Web
     * Spring Data JPA (Hibernate)
-* PostgreSQL
+* PostgreSQL 14
 
 TBD
 
