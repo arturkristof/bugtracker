@@ -40,6 +40,7 @@ TBD
 
 ### Docs
 * LaTeX
+* DBML
 
 ## Tools
 * Git

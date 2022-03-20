@@ -1,0 +1,21 @@
+Project BugTracker {
+  database_type: 'PostgreSQL'
+  Note: 'v0.1'
+}
+
+Table ticket {
+  ticket_id int [pk]
+  title varchar [not null]
+  description varchar
+  status_id int
+}
+
+Table ticket_status {
+  ticket_status_id int [pk]
+  code varchar [not null, unique]
+  description varchar
+}
+
+Ref Ticket_Has_TicketStatus_fk {
+  ticket.status_id > ticket_status.ticket_status_id
+}
