@@ -88,6 +88,9 @@ TBD
 
 3. The documentation is in `docs/target`
 
+## DB Schema
+You can find DB schema in [docs/db](docs/db).
+
 ## Git Workflow
 This project uses Gitflow workflow.  
 Please refer to [this tutorial](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) or any other of your liking.
