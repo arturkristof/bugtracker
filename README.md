@@ -8,6 +8,7 @@ Work in progress bugtracker webapp.
 * [Tools](#tools)
 * [Setup and development](#setup-and-development)
 * [Documentation](#documentation)
+* [DB Schema](#db-schema)
 * [Git Workflow](#git-workflow)
 * [Code Style](#code-style)
 
