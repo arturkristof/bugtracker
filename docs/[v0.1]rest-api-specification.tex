@@ -229,12 +229,20 @@
     Used for deleting ticket with given ID. Does not accept body. \\
     Supported HTTP response codes:
     \subparagraph{HTTP 204 No Content}
+    \newLineSubParagraph{HTTP 400 Bad Request}
+    \begin{itemize}
+        \item \textbf{BOD-40001} when body is not empty
+    \end{itemize}
+    \newLineSubParagraph{HTTP 404 Not Found}
+    \begin{itemize}
+        \item \textbf{URI-40401} when ticket with provided ID does not exist
+    \end{itemize}
 
     \subsubsection{Error responses}
     Error responses are standarized throughout the API and their bodies must be built according to following template:
     \begin{verbatim}
         {
-          "error": "", // code of error
+          "errorCode": "",
           "message": "",
           "detail": ""
         }
