@@ -1,12 +1,15 @@
 \documentclass[a4paper]{article}
+\setcounter{tocdepth}{4}
 \usepackage[utf8]{inputenc}
 \usepackage{float}
 \usepackage{caption}
+\usepackage{tabularx}
 
 \captionsetup[table]{labelformat=empty}
 \newcommand{\appName}{BugTracker}
 \newcommand{\appNameBold}{\textbf{BugTracker}}
 \newcommand{\newLineParagraph}[1]{\paragraph{#1}\mbox{}\\}
+\newcommand{\newLineSubParagraph}[1]{\subparagraph{#1}\mbox{}\\}
 
 \begin{document}
 
@@ -62,13 +65,15 @@
             Content-Type: application/json
             Accept: application/json
         \end{verbatim}
+        \item any unimplemented method must return \textbf{405 Method Not Allowed REQ-40501}
+        \item if there are fields provided in the request that are not expected by method, \textbf{HTTP 400 Bad Request BOD-40004} must be returned
     \end{itemize}
 
     \subsection{v1}
     \subsubsection{/api/v1/tickets}
     \newLineParagraph{GET}
     % TODO: should support pagination in future versions
-    Returns list of tickets with their ID and name. Returns every ticket so there is no need for any request body. \\
+    Returns list of tickets with their ID and title. Returns every ticket so there is no need for any request body. \\
     Supported HTTP response codes with examples:
     \subparagraph{HTTP 200 OK}
     \begin{verbatim}
@@ -76,17 +81,89 @@
           "tickets": [
             {
               "id": 1,
-              "name": "ticket1"
+              "title": "ticket1"
             },
             {
               "id": 2,
-              "name": "ticket2"
+              "title": "ticket2"
             }
           ]
         }
     \end{verbatim}
-    Returned when the request is correct (correct HTTP headers and empty body) and tickets have been found on the server.
+    Returned when the request is correct (correct HTTP headers and empty body) and tickets have been found on the server. If there are no tickets return an empty list:
+    \begin{verbatim}
+        {
+          "tickets": []
+        }
+    \end{verbatim}
+
+    \newLineSubParagraph{HTTP 400 Bad Request}
+    \begin{itemize}
+        \item \textbf{BOD-40001} when body is not empty
+    \end{itemize}
 
     \newLineParagraph{POST}
+    Used for creating new tickets. Accepts body according to following example:
+    \begin{verbatim}
+        {
+          "title": "abc", // required non-null non-empty
+          "description": "", // default "", not required
+          "statusCode": "" // default "NEW", not required
+        }
+    \end{verbatim}
+    Supported HTTP response codes with examples:
+    \subparagraph{HTTP 201 Created}
+    \begin{verbatim}
+        {
+          "ticketId": "1",
+          "ticket": {
+            "title": "abc",
+            "description": "",
+            "statusCode": "NEW"
+          }
+        }
+    \end{verbatim}
+
+    \newLineSubParagraph{HTTP 400 Bad Request}
+    \begin{itemize}
+        \item \textbf{BOD-40002} when body is not provided or is empty
+        \item \textbf{BOD-40003} when title is not provided or is empty.
+    \end{itemize}
+
+    \newLineSubParagraph{HTTP 422 Unprocessable Entity}
+    \begin{itemize}
+        \item \textbf{DAT-42201} when provided status doesn't exist
+    \end{itemize}
+
+    \subsubsection{/api/v1/tickets/:id}
+    \newLineParagraph{GET}
+    \newLineParagraph{PUT}
+    \newLineParagraph{DELETE}
+
+    \subsubsection{Error responses}
+    Error responses are standarized throughout the API and their bodies must be built according to following template:
+    \begin{verbatim}
+        {
+          "error": "", // code of error
+          "message": "",
+          "detail": ""
+        }
+    \end{verbatim}
+    Below you can find error specification:
+    \begin{table}[htbp]
+        \centering
+        \caption{Error Response Specification}
+        \begin{tabularx}{\linewidth}{|l|X|X|}
+            \hline
+            \centering{Error Code} & \centering{Message} & \centering{Detail} \tabularnewline \hline
+            BOD-40001 & Request's body is incorrect. & Expected empty body, got request with non-empty body. \tabularnewline \hline
+            BOD-40002 & Request's body is incorrect. & Expected body, got request with empty or no body. \tabularnewline \hline
+            BOD-40003 & Request's body is incorrect. & Expected title, got request with empty or no title. \tabularnewline \hline
+            BOD-40004 & Request's body is incorrect. & There are fields provided that are not expected by the method called. \tabularnewline \hline
+            DAT-42201 & Request's data is incorrect. & Provided ticket status doesn't exist. \tabularnewline \hline
+            REQ-40501 & Request is incorrect. & Method you are requesting has not been implemented. \tabularnewline \hline
+            \hfill & \hfill & \hfill \tabularnewline \hline
+        \end{tabularx}
+    \end{table}
 
 \end{document}
