@@ -9,7 +9,6 @@
 \newcommand{\appName}{BugTracker}
 \newcommand{\appNameBold}{\textbf{BugTracker}}
 \newcommand{\newLineParagraph}[1]{\paragraph{#1}\mbox{}\\}
-\newcommand{\newLineSubParagraph}[1]{\subparagraph{#1}\mbox{}\\}
 
 \begin{document}
 
@@ -97,7 +96,7 @@
         }
     \end{verbatim}
 
-    \newLineSubParagraph{HTTP 400 Bad Request}
+    \subparagraph{HTTP 400 Bad Request}
     \begin{itemize}
         \item \textbf{BOD-40001} when body is not empty
     \end{itemize}
@@ -123,13 +122,13 @@
     \end{verbatim}
     Returns whole ticket object when created successfully.
 
-    \newLineSubParagraph{HTTP 400 Bad Request}
+    \subparagraph{HTTP 400 Bad Request}
     \begin{itemize}
         \item \textbf{BOD-40002} when body is not provided or is empty
         \item \textbf{BOD-40003} when title is not provided or is empty.
     \end{itemize}
 
-    \newLineSubParagraph{HTTP 422 Unprocessable Entity}
+    \subparagraph{HTTP 422 Unprocessable Entity}
     \begin{itemize}
         \item \textbf{DAT-42201} when provided status doesn't exist
     \end{itemize}
@@ -147,11 +146,11 @@
           "statusCode": "NEW"
         }
     \end{verbatim}
-    \newLineSubParagraph{HTTP 400 Bad Request}
+    \subparagraph{HTTP 400 Bad Request}
     \begin{itemize}
         \item \textbf{BOD-40001} when body is not empty
     \end{itemize}
-    \newLineSubParagraph{HTTP 404 Not Found}
+    \subparagraph{HTTP 404 Not Found}
     \begin{itemize}
         \item \textbf{URI-40401} when ticket with provided ID does not exist
     \end{itemize}
@@ -176,16 +175,16 @@
         }
     \end{verbatim}
     Returns whole ticket object when updated successfully.
-    \newLineSubParagraph{HTTP 400 Bad Request}
+    \subparagraph{HTTP 400 Bad Request}
     \begin{itemize}
         \item \textbf{BOD-40002} when body is empty
         \item \textbf{BOD-40003} when title is not provided or is empty.
     \end{itemize}
-    \newLineSubParagraph{HTTP 404 Not Found}
+    \subparagraph{HTTP 404 Not Found}
     \begin{itemize}
         \item \textbf{URI-40401} when ticket with provided ID does not exist
     \end{itemize}
-    \newLineSubParagraph{HTTP 422 Unprocessable Entity}
+    \subparagraph{HTTP 422 Unprocessable Entity}
     \begin{itemize}
         \item \textbf{DAT-42201} when provided status doesn't exist
     \end{itemize}
@@ -211,16 +210,16 @@
         }
     \end{verbatim}
     Returns whole ticket object when updated successfully.
-    \newLineSubParagraph{HTTP 400 Bad Request}
+    \subparagraph{HTTP 400 Bad Request}
     \begin{itemize}
         \item \textbf{BOD-40002} when body is empty
         \item \textbf{BOD-40005} when title is provided but is empty or null.
     \end{itemize}
-    \newLineSubParagraph{HTTP 404 Not Found}
+    \subparagraph{HTTP 404 Not Found}
     \begin{itemize}
         \item \textbf{URI-40401} when ticket with provided ID does not exist
     \end{itemize}
-    \newLineSubParagraph{HTTP 422 Unprocessable Entity}
+    \subparagraph{HTTP 422 Unprocessable Entity}
     \begin{itemize}
         \item \textbf{DAT-42201} when provided status doesn't exist
     \end{itemize}
@@ -229,11 +228,11 @@
     Used for deleting ticket with given ID. Does not accept body. \\
     Supported HTTP response codes:
     \subparagraph{HTTP 204 No Content}
-    \newLineSubParagraph{HTTP 400 Bad Request}
+    \subparagraph{HTTP 400 Bad Request}
     \begin{itemize}
         \item \textbf{BOD-40001} when body is not empty
     \end{itemize}
-    \newLineSubParagraph{HTTP 404 Not Found}
+    \subparagraph{HTTP 404 Not Found}
     \begin{itemize}
         \item \textbf{URI-40401} when ticket with provided ID does not exist
     \end{itemize}
