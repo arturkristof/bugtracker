@@ -1,0 +1,92 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{caption}
+
+\captionsetup[table]{labelformat=empty}
+\newcommand{\appName}{BugTracker}
+\newcommand{\appNameBold}{\textbf{BugTracker}}
+\newcommand{\newLineParagraph}[1]{\paragraph{#1}\mbox{}\\}
+
+\begin{document}
+
+    \begin{titlepage}
+        \vspace*{\fill}
+        \begin{center}
+            \huge
+            \appName{}
+
+            \vspace{0.4cm}
+            \Huge
+            REST API Specification
+
+            \vspace{3cm}
+            \begin{table}[h]
+                \centering
+                \caption{Document Revision History}
+                \begin{tabular}{cccc}
+                    \hline
+                    Date & Changed By & Version & Comments \\
+                    \hline
+                    2022-03-22 & Artur Kristof & 0.1 & \hfill \\
+                    \hfill & \hfill & \hfill & \hfill \\
+                    \hline
+                \end{tabular}
+            \end{table}
+        \end{center}
+        \vspace*{\fill}
+    \end{titlepage}
+
+    \tableofcontents
+
+    \section{Introduction}
+    This document details specification of \appNameBold{}'s REST API.
+
+    \subsection{Intended Audience}
+    Intended audience of this document are developers, designers and testers working on \appNameBold{}.
+
+    \subsection{Scope}
+    This document includes:
+    \begin{itemize}
+        \item \appNameBold{}'s REST API endpoints URIs
+        \item available methods for each endpoint and their specifications
+        \item possible responses
+    \end{itemize}
+
+    \section{Specification}
+
+    \subsection{Assumptions}
+    \begin{itemize}
+        \item the API accepts JSON requests and produces JSON responses, therefore appropriate HTTP headers for every request are:
+        \begin{verbatim}
+            Content-Type: application/json
+            Accept: application/json
+        \end{verbatim}
+    \end{itemize}
+
+    \subsection{v1}
+    \subsubsection{/api/v1/tickets}
+    \newLineParagraph{GET}
+    % TODO: should support pagination in future versions
+    Returns list of tickets with their ID and name. Returns every ticket so there is no need for any request body. \\
+    Supported HTTP response codes with examples:
+    \subparagraph{HTTP 200 OK}
+    \begin{verbatim}
+        {
+          "tickets": [
+            {
+              "id": 1,
+              "name": "ticket1"
+            },
+            {
+              "id": 2,
+              "name": "ticket2"
+            }
+          ]
+        }
+    \end{verbatim}
+    Returned when the request is correct (correct HTTP headers and empty body) and tickets have been found on the server.
+
+    \newLineParagraph{POST}
+
+\end{document}
