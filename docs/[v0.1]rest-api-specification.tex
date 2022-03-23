@@ -69,7 +69,7 @@
     \end{itemize}
 
     \subsection{v1}
-    \subsubsection{/api/v1/tickets}
+    \subsubsection{/api/v1/ticket-management/tickets}
     \newLineParagraph{GET}
     % TODO: should support pagination in future versions
     Returns list of tickets with their ID and title. Does not accept request body. \\
@@ -133,7 +133,7 @@
         \item \textbf{DAT-42201} when provided status doesn't exist
     \end{itemize}
 
-    \subsubsection{/api/v1/tickets/:id}
+    \subsubsection{/api/v1/ticket-management/tickets/:id}
     \newLineParagraph{GET}
     Returns details about ticket with given ID. Does not accept request body. \\
     Supported HTTP response codes with examples:
@@ -235,6 +235,39 @@
     \subparagraph{HTTP 404 Not Found}
     \begin{itemize}
         \item \textbf{URI-40401} when ticket with provided ID does not exist
+    \end{itemize}
+
+    \subsubsection{/api/v1/ticket-management/statuses}
+    \newLineParagraph{GET}
+    Returns list of available statuses their ID, code and description. Does not accept request body. \\
+    Supported HTTP response codes with examples:
+    \subparagraph{HTTP 200 OK}
+    \begin{verbatim}
+        {
+          "statuses": [
+            {
+              "id": 1,
+              "code": "NEW",
+              "description": "New"
+            },
+            {
+              "id": 2,
+              "code": "IN_PROGRESS",
+              "description": "In progress"
+            }
+          ]
+        }
+    \end{verbatim}
+    Returned when the request is correct (correct HTTP headers and empty body) and statuses have been found on the server. If there are no statuses return an empty list:
+    \begin{verbatim}
+        {
+          "statuses": []
+        }
+    \end{verbatim}
+
+    \subparagraph{HTTP 400 Bad Request}
+    \begin{itemize}
+        \item \textbf{BOD-40001} when body is not empty
     \end{itemize}
 
     \subsubsection{Error responses}
