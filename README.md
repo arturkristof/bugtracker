@@ -87,8 +87,6 @@ TBD
         >cd docs
         >compile
 
-3. The documentation is in `docs/target`
-
 ## DB Schema
 You can find DB schema in [docs/db](docs/db).
 
