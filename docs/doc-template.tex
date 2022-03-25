@@ -1,34 +1,43 @@
+% Preamble
 \documentclass[a4paper]{article}
+
+% Packages
 \usepackage[utf8]{inputenc}
 \usepackage{float}
 \usepackage{caption}
 
+% Settings
 \captionsetup[table]{labelformat=empty}
+
+% Commands
 \newcommand{\appName}{BugTracker}
 \newcommand{\appNameBold}{\textbf{BugTracker}}
 
+
+
+
+%Document
 \begin{document}
 
+% Title page
     \begin{titlepage}
         \vspace*{\fill}
         \begin{center}
             \huge
             \appName{}
-
             \vspace{0.4cm}
             \Huge
             Document title here
-
             \vspace{3cm}
             \begin{table}[h]
                 \centering
                 \caption{Document Revision History}
                 \begin{tabular}{cccc}
                     \hline
-                    Date & Changed By & Version & Comments \\
+                    Date   & Changed By & Version & Comments \\
                     \hline
-                    \hfill & \hfill & \hfill & \hfill \\
-                    \hfill & \hfill & \hfill & \hfill \\
+                    \hfill & \hfill     & \hfill  & \hfill   \\
+                    \hfill & \hfill     & \hfill  & \hfill   \\
                     \hline
                 \end{tabular}
             \end{table}
@@ -36,6 +45,14 @@
         \vspace*{\fill}
     \end{titlepage}
 
+
+
+
     \tableofcontents
 
+
+
+
+    \pagebreak
+    \section{First section}
 \end{document}
