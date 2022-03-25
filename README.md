@@ -8,7 +8,6 @@ Work in progress bugtracker webapp.
 * [Tools](#tools)
 * [Setup and development](#setup-and-development)
 * [Documentation](#documentation)
-* [DB Schema](#db-schema)
 * [Git Workflow](#git-workflow)
 * [Code Style](#code-style)
 
@@ -26,8 +25,8 @@ I intend to create a full documentation including functional designs, technical 
     * Maven
 * Spring Boot
     * Spring Web
-    * Spring Data JPA (Hibernate)
-* PostgreSQL 14
+    * Spring Data JPA
+* PostgreSQL
 
 TBD
 
@@ -41,7 +40,6 @@ TBD
 
 ### Docs
 * LaTeX
-* DBML
 
 ## Tools
 * Git
@@ -50,7 +48,6 @@ TBD
 * Overleaf
 * DataGrip
 * Windows 10
-* dbdiagram.io
 
 TBD
 
@@ -88,9 +85,6 @@ TBD
         >compile
 
 3. The documentation is in `docs/target`
-
-## DB Schema
-You can find DB schema in [docs/db](docs/db).
 
 ## Git Workflow
 This project uses Gitflow workflow.  
