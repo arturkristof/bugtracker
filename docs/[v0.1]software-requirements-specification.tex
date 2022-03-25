@@ -1,35 +1,44 @@
+% Preamble
 \documentclass[a4paper]{article}
+
+% Packages
 \usepackage[utf8]{inputenc}
 \usepackage{float}
 \usepackage{caption}
 \usepackage{tabularx}
 
+% Settings
 \captionsetup[table]{labelformat=empty}
+
+% Commands
 \newcommand{\appName}{BugTracker}
 \newcommand{\appNameBold}{\textbf{BugTracker}}
 
+
+
+
+% Document
 \begin{document}
 
+% Title page
     \begin{titlepage}
         \vspace*{\fill}
         \begin{center}
             \huge
             \appName{}
-
             \vspace{0.4cm}
             \Huge
             Software Requirement Specification
-
             \vspace{3cm}
             \begin{table}[h]
                 \centering
                 \caption{Document Revision History}
                 \begin{tabular}{cccc}
                     \hline
-                    Date & Changed By & Version & Comments \\
+                    Date       & Changed By    & Version & Comments               \\
                     \hline
-                    2022-03-17 & Artur Kristof & 0.1 & \hfill \\
-                    \hfill & \hfill & \hfill & \hfill \\
+                    2022-03-25 & Artur Kristof & 0.1     & Minimum viable product \\
+                    \hfill     & \hfill        & \hfill  & \hfill                 \\
                     \hline
                 \end{tabular}
             \end{table}
@@ -37,8 +46,15 @@
         \vspace*{\fill}
     \end{titlepage}
 
+
+
+
     \tableofcontents
 
+
+
+
+    \pagebreak
     \section{Introduction}
     This document details the project plan for the developments of \appNameBold{}.
 
@@ -60,6 +76,10 @@
         \item overall description
     \end{itemize}
 
+
+
+
+    \pagebreak
     \section{Overall Description}
     Development teams need tools that let them distribute tasks among developers and track their progress.
     The problem is that because different development teams work with different methodologies they have to look for a tool that suits them.
@@ -72,8 +92,12 @@
     The application will be developed in TypeScript with Bootstrap. It will connect to a REST API built with Java + Spring to store and retrieve data from a PostgreSQL database.
 
     \subsection{User Class and Characteristics}
-    % TBD - not applicable in MVP
+% TBD - not applicable in v0.1
 
+
+
+
+    \pagebreak
     \section{System Features and Requirements}
 
     \subsection{Functional Requirements}
@@ -81,17 +105,18 @@
         \centering
         \begin{tabularx}{\linewidth}{|X|l|}
             \hline
-            \centering{Description} & \centering{Version} \tabularnewline \hline
-            Users should be able to create new tickets with title and desription & 0.1 \tabularnewline \hline
-            Users should be able to edit title and description of a ticket & 0.1 \tabularnewline \hline
-            Users should be able to delete ticket & 0.1 \tabularnewline \hline
-            Users should be able to view list of tickets & 0.1 \tabularnewline \hline
-            Users should be able to view separate tickets & 0.1 \tabularnewline \hline
-            Users should be able to change ticket's status from "TO DO" to "DOING" and then to "DONE" & 0.1 \tabularnewline \hline
+            \centering{Description}                                                                   & \centering{Version} \tabularnewline \hline
+            Users should be able to create new tickets with title and desription                      & 0.1                 \tabularnewline \hline
+            Users should be able to edit title and description of a ticket                            & 0.1                 \tabularnewline \hline
+            Users should be able to delete ticket                                                     & 0.1                 \tabularnewline \hline
+            Users should be able to view list of tickets                                              & 0.1                 \tabularnewline \hline
+            Users should be able to view separate tickets                                             & 0.1                 \tabularnewline \hline
+            Users should be able to change ticket's status from "TO DO" to "DOING" and then to "DONE" & 0.1                 \tabularnewline \hline
         \end{tabularx}
     \end{table}
 
     \subsection{Non-functional Requirements}
+
     \subsubsection{Technologies Used}
     \begin{itemize}
         \item Java 17 OpenJDK
@@ -128,5 +153,4 @@
         \item Usability: The interface must be easy to learn without a tutorial and allow users to accomplish their goals without errors. The application must also accessible by people with disabilities.
         \item Functionality: The application must have every functionality required by Functional Requirements section in this document implemented.
     \end{itemize}
-
 \end{document}
