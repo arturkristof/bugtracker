@@ -65,10 +65,6 @@ All the instruction is written with Windows 10 in mind.
 3. Install [Maven](https://maven.apache.org/install.html)
     * Don't forget to add the `bin` folder to your `Path` system variable
 4. Install [PostgreSQL 14](https://www.postgresql.org/download/windows/)
-    * Password for the database superuser (postgres): `pass`
-    * Port number the server should listen on: `5432`
-    * Locale to be used by the new database cluster: `Polish, Poland`
-    * No need to launch Stack Builder at exit for this project
 5. Clone the repository
 6. Run the project
 
